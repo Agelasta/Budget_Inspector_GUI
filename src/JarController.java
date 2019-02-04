@@ -62,20 +62,19 @@ public class JarController {
 
             try {
                 double salary = jarView.getSalary();
-                double necessitiesCustom = jarView.getNecessitiesCustomRate();
-                double financialCustom = jarView.getFinancialCustomRate();
-                double longTermCustom = jarView.getLongTermCustomRate();
-                double educationCustom = jarView.getEducationCustomRate();
-                double playCustom = jarView.getPlayCustomRate();
-                double giveCustom = jarView.getGiveCustomRate();
+                double necessitiesCustom = jarView.getCustomNecessitiesRate();
+                double financialCustom = jarView.getCustomFinancialRate();
+                double longTermCustom = jarView.getCustomLongTermRate();
+                double educationCustom = jarView.getCustomEducationRate();
+                double playCustom = jarView.getCustomPlayRate();
+                double giveCustom = jarView.getCustomGiveRate();
 
                 if (salary <= 0) {
                     jarView.showWarning("Please enter value bigger than 0");
                 } else {
 
-                    if ((jarView.getNecessitiesCustomRate() * 100 + jarView.getFinancialCustomRate() * 100 +
-                            jarView.getLongTermCustomRate() * 100 + jarView.getEducationCustomRate() * 100 +
-                            jarView.getPlayCustomRate() * 100 + jarView.getGiveCustomRate() * 100) != 100) {
+                    if ((jarModel.addRates(necessitiesCustom, financialCustom, educationCustom, longTermCustom,
+                            playCustom, giveCustom)) != 10000) {
                         jarView.showWarning("Total amount of percentage values must equal 100");
                     } else {
                         jarModel.setCustomNecessities(salary, necessitiesCustom);

@@ -253,49 +253,49 @@ public class JarView extends JFrame {
     }
 
 
-    public double getNecessitiesCustomRate() {
+    public double getCustomNecessitiesRate() {
         String percentage = necessitiesRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-    public double getFinancialCustomRate() {
+    public double getCustomFinancialRate() {
         String percentage = financialRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-    public double getLongTermCustomRate() {
+    public double getCustomLongTermRate() {
         String percentage = longTermRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-    public double getEducationCustomRate() {
+    public double getCustomEducationRate() {
         String percentage = educationRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-    public double getPlayCustomRate() {
+    public double getCustomPlayRate() {
         String percentage = playRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-    public double getGiveCustomRate() {
+    public double getCustomGiveRate() {
         String percentage = giveRate.getText();
         percentage = percentage.replace("%", "");
         percentage = percentage.replace(",", ".");
         return (Double.parseDouble(percentage) / 100);
     }
 
-// setting default values of fields while restoring default settings
+
 
     public void setSalary(String placeholder) {
         salary.setText(placeholder);
@@ -349,6 +349,7 @@ public class JarView extends JFrame {
     public JTextField getGiveLabel() {
         return giveLabel;
     }
+
 
     public JTextField getNecessitiesRate() {
         return necessitiesRate;
