@@ -7,6 +7,5 @@ public class JarApp {
         JarController jarController = new JarController(jarModel, jarView);
 
         jarView.setVisible(true);
-
     }
 }

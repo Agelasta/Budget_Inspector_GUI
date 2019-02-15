@@ -63,7 +63,7 @@ public class JarView extends JFrame {
     private Cursor cursor = new Cursor(Cursor.HAND_CURSOR);
 
 
-    JarView() {
+    public JarView() {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(552, 550);

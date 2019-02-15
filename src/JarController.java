@@ -11,7 +11,7 @@ public class JarController {
     private JarModel jarModel;
     private JarView jarView;
 
-    JarController(JarModel jarModel, JarView jarView) {
+    public JarController(JarModel jarModel, JarView jarView) {
         this.jarModel = jarModel;
         this.jarView = jarView;
         this.jarView.addCalculateListener(new CalculateListener());
